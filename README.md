@@ -32,13 +32,13 @@ The project displays a statistics summary in Arabic, with a modern, dark-themed 
 
 1.  **قم بتنزيل أو استنساخ (clone) هذا المستودع:**
     ```bash
-    git clone https://github.com/your-username/your-repository-name.git
+    git clone https://github.com/seif4d/statistics.git
     ```
     (استبدل `your-username/your-repository-name` باسم المستخدم واسم المستودع الخاص بك)
 
 2.  **انتقل إلى مجلد المشروع:**
     ```bash
-    cd your-repository-name
+    cd statistics
     ```
 
 3.  **افتح ملف `index.html` في متصفح الويب المفضل لديك.** (مثل Google Chrome, Firefox, Edge, Safari).
@@ -46,11 +46,12 @@ The project displays a statistics summary in Arabic, with a modern, dark-themed 
 لا توجد أي اعتمادات (dependencies) خارجية تحتاج إلى تثبيت أو خطوات بناء معقدة، فالمشروع يعتمد على ملفات HTML, CSS, و JavaScript تعمل مباشرة في المتصفح.
 
 ## 📁 هيكل الملفات (File Structure)
+    ```bash
 ├── index.html # الملف الرئيسي لمحتوى HTML وملخص الإحصاء
 ├── style.css # ملف الأنماط (CSS) الرئيسي
 ├── script.js # ملف JavaScript للتفاعلية وتحريك العناصر
 └── README.md # هذا الملف
-
+    ```
 
 ## 🖥️ كيفية الاستخدام (How to Use)
 
@@ -81,4 +82,4 @@ The project displays a statistics summary in Arabic, with a modern, dark-themed 
 
 ## 📄 الترخيص (License)
 
-هذا المشروع مرخص تحت رخصة MIT. انظر ملف `LICENSE` (إذا تم إضافته) لمزيد من التفاصيل، أو افترض رخصة MIT كترخيص قياسي للمشاريع المفتوحة المصدر.
+هذا المشروع مرخص تحت رخصة MIT. انظر ملف `LICENSE` لمزيد من التفاصيل .
