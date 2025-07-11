@@ -1,289 +1,226 @@
-/* --- استيراد خط Google (Tajawal خط عربي مميز مع أداء جيد) --- */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+/* --- استيراد خط Google (Tajawal) --- */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
 
-/* --- متغيرات الجذر لسهولة إدارة السمات --- */
+/* --- متغيرات الجذر (Palette) بتصميم عصري وجذاب --- */
 :root {
-    /* ألوان جديدة إبداعية للوضع الداكن */
-    --bg-gradient-start: #10141e;
-    --bg-gradient-end: #1a1d2d;
-    --text-primary: #f0f2f5;
-    --text-secondary: #c2c7d0;
-    --accent-color: #7d5fff; /* لون أرجواني مميز */
-    --accent-color-darker: #6649cc;
-    --surface-color: rgba(26, 29, 45, 0.9); /* ألوان خلفية أكثر عمقاً وشفافية أقل لتحسين الأداء */
-    --surface-border-color: rgba(255, 255, 255, 0.08);
-    --surface-shadow-soft: rgba(0, 0, 0, 0.2);
-    --surface-shadow-medium: rgba(0, 0, 0, 0.3);
-    --code-bg: #191d2a;
-    --code-text: #e0e6f0;
-    --scrollbar-track: #161a24;
-    --scrollbar-thumb: #3c4257;
-    --scrollbar-thumb-hover: #576080;
-    --border-radius-large: 16px;
-    --border-radius-medium: 8px;
+    --font-primary: 'Tajawal', sans-serif;
+    
+    /* لوحة ألوان احترافية ومريحة للعين */
+    --bg-dark-1: #0d1117; /* لون خلفية غامق جداً مثل GitHub */
+    --bg-dark-2: #161b22; /* لون الأسطح والصناديق */
+    --border-color: #30363d; /* لون الحدود */
+    --text-primary: #c9d1d9; /* لون النصوص الأساسية (أبيض خفيف) */
+    --text-secondary: #8b949e; /* لون النصوص الفرعية (رمادي فاتح) */
+    --accent-primary: #58a6ff; /* أزرق جذاب للتفاعلات */
+    --accent-secondary: #3fb950; /* أخضر للإيجابيات أو النجاح */
+    --accent-purple: #a371f7; /* بنفسجي للعناوين الخاصة */
+
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.4);
+    
+    --border-radius-main: 12px;
+    --border-radius-small: 8px;
 }
 
-/* --- تنسيقات HTML و Body أساسية --- */
+/* --- تنسيقات أساسية للجسم والصفحة --- */
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
-    height: 100%;
+    font-size: 16px; /* حجم أساسي جيد */
 }
 
 body {
-    font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-    background-attachment: fixed; /* منع تكرار التدرج عند التمرير لتحسين الأداء */
+    font-family: var(--font-primary);
+    background-color: var(--bg-dark-1);
     color: var(--text-primary);
-    line-height: 1.7;
+    line-height: 1.8; /* زيادة ارتفاع السطر لراحة القراءة */
     margin: 0;
-    padding: 30px 20px;
-    min-height: 100vh;
+    padding: 2rem 1rem; /* استخدام rem لوحدات مرنة */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط كل المحتوى */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
 }
 
-/* --- تحسين العناوين --- */
+/* --- تصميم عنوان رئيسي جذاب --- */
 h1 {
-    color: var(--accent-color);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
     text-align: center;
-    margin-bottom: 45px;
-    font-size: 2.6rem;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.5px;
+    margin-bottom: 3rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius-main);
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-purple)); /* تدرج لوني ملفت */
+    box-shadow: var(--shadow-medium);
+    max-width: 90%;
 }
 
-/* --- تحسين الرسائل --- */
+/* --- تصميم صناديق المحتوى (الرسائل) بشكل إبداعي --- */
 .message-content.markdown-body {
-    background-color: var(--surface-color);
-    border: 1px solid var(--surface-border-color);
-    padding: 24px 28px;
-    border-radius: var(--border-radius-large);
-    margin-bottom: 28px;
-    max-width: 980px;
-    box-shadow: 0 4px 12px var(--surface-shadow-soft);
-    transition: transform 0.3s ease, opacity 0.3s ease; /* تبسيط التأثيرات الانتقالية */
+    background-color: var(--bg-dark-2);
+    border: 1px solid var(--border-color);
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius-main);
+    margin-bottom: 2rem;
+    max-width: 800px; /* تحديد عرض أقصى للقراءة المريحة */
+    width: 100%;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease; /* حركة ناعمة */
     opacity: 0;
-    transform: translateY(20px);
-    will-change: transform, opacity; /* تلميح للمتصفح لتحسين الأداء */
+    transform: translateY(30px) scale(0.98); /* تأثير دخول بسيط */
 }
 
 .message-content.markdown-body.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
-/* --- تنسيق النصوص داخل الرسائل --- */
-.message-content.markdown-body p,
-.message-content.markdown-body li {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    margin-bottom: 1.2em;
+/* --- تنسيق الأيقونة اللي أضفناها في HTML --- */
+.header-icon {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle; /* لمحاذاة الأيقونة مع النص */
 }
 
-.message-content.markdown-body strong {
+/* --- تنسيق النصوص داخل الصناديق --- */
+.message-content p, .message-content li {
     color: var(--text-primary);
-    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
 }
 
-/* --- تنسيق الروابط --- */
-.message-content.markdown-body a {
-    color: var(--accent-color);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    font-weight: 500;
+.message-content strong {
+    color: white; /* تمييز النص الغامق بلون أوضح */
+    font-weight: 700;
 }
 
-.message-content.markdown-body a:hover,
-.message-content.markdown-body a:focus {
-    color: var(--accent-color-darker);
-    border-bottom-color: var(--accent-color-darker);
-    outline: none;
+/* --- تنسيق القوائم (مرقمة وغير مرقمة) --- */
+.message-content ul, .message-content ol {
+    padding-right: 20px;
 }
 
-/* --- تنسيق القوائم --- */
-.message-content.markdown-body ul,
-.message-content.markdown-body ol {
-    padding-right: 25px;
-    list-style-position: outside;
+.message-content ul li::marker {
+    color: var(--accent-primary);
+    font-size: 1.2em;
 }
 
-.message-content.markdown-body ul li::marker {
-    color: var(--accent-color);
+.message-content ol li::marker {
+    color: var(--accent-secondary);
+    font-weight: 700;
 }
 
-.message-content.markdown-body ol li::marker {
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-/* --- تنسيق أكواد البرمجة --- */
-.message-content.markdown-body pre {
-    background-color: var(--code-bg);
-    border: 1px solid var(--surface-border-color);
-    border-radius: var(--border-radius-medium);
-    padding: 1.2em;
-    overflow-x: auto;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.message-content.markdown-body pre code.hljs {
-    background: transparent !important;
-    padding: 0 !important;
-    color: var(--code-text) !important;
-    font-size: 0.9rem !important;
-    line-height: 1.6 !important;
-}
-
-/* ألوان مُحسنة للرموز البرمجية */
-.message-content.markdown-body .hljs-keyword { color: #bb80ff !important; }
-.message-content.markdown-body .hljs-string { color: #ff9d76 !important; }
-.message-content.markdown-body .hljs-number { color: #a2eebc !important; }
-.message-content.markdown-body .hljs-comment { color: #7a889e !important; font-style: italic; }
-.message-content.markdown-body .hljs-built_in, .message-content.markdown-body .hljs-literal { color: #79b8ff !important; }
-.message-content.markdown-body .hljs-title, .message-content.markdown-body .hljs-section { color: #ffda85 !important; }
-
-/* --- الخط الأفقي --- */
-.message-content.markdown-body hr {
+/* --- تنسيق الخط الفاصل --- */
+.message-content hr {
     border: none;
     height: 1px;
-    background-color: var(--surface-border-color);
-    margin: 35px auto;
-    width: 80%;
+    background-image: linear-gradient(to left, transparent, var(--border-color), transparent); /* تدرج للخط */
+    margin: 3rem auto;
+    width: 90%;
 }
 
-/* --- تنسيق الجداول --- */
-.message-content.markdown-body table {
+/* --- تصميم احترافي للجداول --- */
+.message-content table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 25px 0;
-    font-size: 0.9rem;
-    border: 1px solid var(--surface-border-color);
-    border-radius: var(--border-radius-medium);
-    overflow: hidden;
-    display: block;
-    overflow-x: auto;
+    border-collapse: collapse; /* استخدام collapse لشكل أنظف */
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    overflow: hidden; /* لإخفاء الزوايا الحادة */
+    display: block; /* ضروري لـ overflow-x */
+    overflow-x: auto; /* يجعل الجدول يتمرر أفقياً على الموبايل */
 }
 
-.message-content.markdown-body th,
-.message-content.markdown-body td {
-    padding: 12px 16px;
+.message-content th, .message-content td {
+    padding: 1rem;
     text-align: right;
-    border-bottom: 1px solid var(--surface-border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.message-content.markdown-body th[align="left"],
-.message-content.markdown-body td[align="left"] { text-align: left; }
-
-.message-content.markdown-body th[align="center"],
-.message-content.markdown-body td[align="center"] { text-align: center; }
-
-.message-content.markdown-body th {
-    background-color: rgba(42, 47, 73, 0.9);
-    color: var(--accent-color);
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+.message-content th {
+    background-color: #1f242c; /* خلفية أغمق قليلاً للترويسة */
+    color: var(--accent-primary);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-.message-content.markdown-body tr:last-child td {
+.message-content tr:last-child td {
     border-bottom: none;
 }
 
-.message-content.markdown-body tr:nth-child(even) td {
-    background-color: rgba(255, 255, 255, 0.02);
+/* تأثير جميل عند المرور على صفوف الجدول */
+.message-content tr:hover {
+    background-color: rgba(88, 166, 255, 0.1);
 }
 
-/* تحسين تأثير التحويم */
-.message-content.markdown-body tr:hover td {
-    background-color: rgba(125, 95, 255, 0.08);
-}
-
-/* --- تخصيص شريط التمرير --- */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-}
-
+/* --- تنسيق شريط التمرير Scrollbar --- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-dark-1); }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb);
+    background-color: #444c56;
     border-radius: 10px;
-    border: 2px solid var(--scrollbar-track);
+    border: 2px solid var(--bg-dark-1);
+}
+::-webkit-scrollbar-thumb:hover { background-color: #586069; }
+
+
+/* --- التجاوب مع الشاشات (Responsive Design) --- */
+
+/* شاشات التابلت (أقل من 992px) */
+@media (max-width: 992px) {
+    .message-content.markdown-body {
+        max-width: 90%; /* زيادة العرض ليملأ الشاشة بشكل أفضل */
+        padding: 1.8rem 2rem;
+    }
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar-thumb-hover);
-}
-
-::-webkit-scrollbar-corner { 
-    background: transparent; 
-}
-
-/* --- تعديلات للأجهزة المحمولة --- */
+/* شاشات الموبايل الكبيرة (أقل من 768px) */
 @media (max-width: 768px) {
     html {
         font-size: 15px;
     }
-    
-    body {
-        padding: 20px 15px;
-    }
-    
+
     h1 {
         font-size: 2.2rem;
-        margin-bottom: 30px;
+        margin-bottom: 2.5rem;
     }
-    
+
     .message-content.markdown-body {
-        padding: 18px 20px;
-        border-radius: var(--border-radius-medium);
-        margin-bottom: 22px;
+        padding: 1.5rem;
+        max-width: 100%; /* اجعل الصناديق تأخذ كامل العرض المتاح */
     }
-    
-    .message-content.markdown-body p,
-    .message-content.markdown-body li {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .message-content.markdown-body pre {
-        padding: 1em;
-    }
-    
-    .message-content.markdown-body pre code.hljs {
-        font-size: 0.85rem !important;
-    }
-    
-    .message-content.markdown-body th,
-    .message-content.markdown-body td {
-        padding: 10px;
+
+    .message-content p, .message-content li {
+        font-size: 1rem; /* تصغير الخط قليلاً ليناسب الموبايل */
     }
 }
 
+/* شاشات الموبايل الصغيرة (أقل من 480px) */
 @media (max-width: 480px) {
-    html {
-        font-size: 14px;
+    body {
+        padding: 1.5rem 0.5rem; /* تقليل الهوامش الجانبية */
     }
     
     h1 {
         font-size: 1.8rem;
     }
-    
+
     .message-content.markdown-body {
-        padding: 15px;
+        padding: 1.2rem;
+        border-radius: var(--border-radius-small);
     }
-    
-    .message-content.markdown-body ul,
-    .message-content.markdown-body ol {
-        padding-right: 20px;
-    }
+}
+
+/* الكود الخاص بـ highlight.js لا يحتاج تغيير كبير، لكن هذا يضمن تكامله مع التصميم الجديد */
+.message-content pre {
+    background-color: var(--bg-dark-1);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    padding: 1.2em;
+    overflow-x: auto;
+}
+.message-content pre code.hljs {
+    background: transparent !important;
+    padding: 0 !important;
 }
